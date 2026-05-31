@@ -31,24 +31,16 @@ Follow these steps once; after that, updating is two clicks.
 
 ---
 
-## Step 4 — Deploy to GitHub Pages
+## Step 4 — Turn on Pages with GitHub Actions (one time)
 
-Open the VS Code terminal (`` Ctrl + ` ``) and run:
-
-```powershell
-npm run deploy
-```
-
-This builds the site and pushes it to a `gh-pages` branch automatically.
-
----
-
-## Step 5 — Turn on Pages (one time)
+This repo includes an **auto-deploy workflow** (`.github/workflows/deploy.yml`).
 
 1. Go to `https://github.com/YOUR_USERNAME/portfolio` → **Settings → Pages**.
-2. Under **Source**, choose **Deploy from a branch**.
-3. Branch: **`gh-pages`** · Folder: **`/ (root)`** → **Save**.
-4. Wait ~1–2 minutes. Your live site appears at:
+2. Under **Source**, choose **GitHub Actions** (not "Deploy from a branch").
+3. That's it — no folder/branch to pick.
+
+The workflow runs automatically on your first push. Watch it under the repo's
+**Actions** tab. When the green check appears (~1–2 min), your site is live at:
 
 ```
 https://YOUR_USERNAME.github.io/portfolio/
@@ -58,16 +50,17 @@ https://YOUR_USERNAME.github.io/portfolio/
 
 ---
 
-## Updating the site later (the 2-click flow)
+## Updating the site later (fully automatic 🚀)
 
-**Content/code changes** (e.g. real metrics in `src/data.ts`, your headshot):
+After any change (real metrics in `src/data.ts`, your headshot, copy edits):
 1. Save files (`Ctrl + S`).
-2. Source Control panel → type a short message → **✓ Commit** → **Sync Changes**.
-   *(This updates the source on `main`.)*
-3. In the terminal, run **`npm run deploy`** again to push the new build live.
+2. Source Control panel (`Ctrl + Shift + G`) → type a short message → **✓ Commit** → **Sync Changes**.
 
-> Tip: `main` holds your source code; the `gh-pages` branch holds the built site.
-> `npm run deploy` always rebuilds from your latest local files.
+That's it. The push triggers the workflow, which **rebuilds and redeploys the site automatically** — you never run a deploy command. Refresh your live URL after ~1–2 min.
+
+> **Manual fallback:** `npm run deploy` (in the terminal) still works too — it
+> builds and pushes to a `gh-pages` branch. You only need this if you ever turn
+> the Actions workflow off.
 
 ---
 
