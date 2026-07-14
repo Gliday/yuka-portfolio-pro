@@ -1,0 +1,14 @@
+# Netlify build configuration
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Serve index.html for any unknown path (safe for single-page sites;
+# static assets are still served directly before this rule applies).
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
