@@ -107,7 +107,6 @@ function Hero() {
         <div className="hero-availability"><span className="avail-dot" /> Open to PhD positions, research collaborations &amp; consulting</div>
         <div className="hero-cta">
           <a className="btn btn-primary" onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })} style={{ cursor: 'pointer' }}>See selected work →</a>
-          <a className="btn btn-ghost" href="/Gliday-Yuka-Luvonga-CV.pdf" download>Download CV ↓</a>
           <a className="btn btn-ghost" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} style={{ cursor: 'pointer' }}>Reach out ↗</a>
         </div>
         <div className="hero-meta">
