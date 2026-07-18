@@ -1,5 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
-import { CASES, SKILLS, ABOUT_BIO, COPY, type CaseStudy } from './data'
+import {
+  CASES, SKILLS, ABOUT_BIO, COPY, EXPERIENCE,
+  AWARDS, CERTIFICATIONS, MEMBERSHIPS, ACTIVITIES,
+  type CaseStudy,
+} from './data'
 
 /* ─── FORMSPREE: paste your endpoint here to enable real email sending.
    Create a free form at https://formspree.io → copy the URL (e.g.
@@ -35,7 +39,7 @@ function Navbar({ theme, toggleTheme }: { theme: string; toggleTheme: () => void
   }, [])
 
   useEffect(() => {
-    const ids = ['hero', 'work', 'about', 'skills', 'writing', 'contact']
+    const ids = ['hero', 'work', 'experience', 'about', 'skills', 'writing', 'contact']
     const obs = new IntersectionObserver(
       entries => entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id) }),
       { threshold: 0.4 }
@@ -48,7 +52,7 @@ function Navbar({ theme, toggleTheme }: { theme: string; toggleTheme: () => void
     setOpen(false)
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
-  const links: [string, string][] = [['hero', 'Home'], ['work', 'Work'], ['about', 'About'], ['skills', 'Skills'], ['writing', 'Writing'], ['contact', 'Contact']]
+  const links: [string, string][] = [['hero', 'Home'], ['work', 'Work'], ['experience', 'Experience'], ['about', 'About'], ['skills', 'Skills'], ['writing', 'Writing'], ['contact', 'Contact']]
 
   return (
     <nav id="nav" className={scrolled ? 'scrolled' : ''}>
@@ -232,6 +236,74 @@ function CaseDetail({ c, onClose }: { c: CaseStudy; onClose: () => void }) {
   )
 }
 
+/* ════════════ EXPERIENCE ════════════ */
+function Experience() {
+  return (
+    <section className="section section-alt" id="experience">
+      <div className="wrap">
+        <span className="eyebrow"><span className="dot" />Career</span>
+        <h2 className="section-title">Full <em>experience</em></h2>
+        <p className="section-intro">{COPY.experienceIntro}</p>
+        <div className="timeline">
+          {EXPERIENCE.map((r, i) => (
+            <div className="tl-item" key={i}>
+              <div className="tl-dot" />
+              <div className="tl-card">
+                <div className="tl-head">
+                  <div>
+                    <h3>{r.title}</h3>
+                    <p className="tl-org">{r.org}</p>
+                  </div>
+                  <div className="tl-meta">
+                    <span className="tl-dates">{r.dates}</span>
+                    <span className="tl-loc">{r.location}</span>
+                  </div>
+                </div>
+                <span className={`tag ${r.tag === 'Bioinformatics' || r.tag === 'Genomics' || r.tag === 'ML' ? 'cat-lab' : r.tag === 'Teaching' ? 'cat-field' : 'cat-ai'}`} style={{ alignSelf: 'flex-start' }}>{r.tag}</span>
+                <p className="tl-note">{r.note}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ════════════ RECOGNITION ════════════ */
+function Recognition() {
+  const cols: [string, { title: string; detail: string }[]][] = [
+    ['🏆 Awards', AWARDS],
+    ['📜 Certifications', CERTIFICATIONS],
+    ['🤝 Memberships', MEMBERSHIPS],
+    ['🎤 Activities', ACTIVITIES],
+  ]
+  return (
+    <section className="section section-alt" id="recognition">
+      <div className="wrap">
+        <span className="eyebrow"><span className="dot" />Recognition &amp; involvement</span>
+        <h2 className="section-title">Awards, credentials &amp; <em>community</em></h2>
+        <p className="section-intro">{COPY.recognitionIntro}</p>
+        <div className="rec-grid">
+          {cols.map(([heading, items]) => (
+            <div className="rec-col" key={heading}>
+              <h3>{heading}</h3>
+              <ul>
+                {items.map((it, i) => (
+                  <li key={i}>
+                    <strong>{it.title}</strong>
+                    <span>{it.detail}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 /* ════════════ ABOUT ════════════ */
 function About() {
   return (
@@ -409,8 +481,10 @@ export default function App() {
         <Services />
         <Work onOpen={setActiveCase} />
         {activeCase && <CaseDetail c={activeCase} onClose={() => setActiveCase(null)} />}
+        <Experience />
         <About />
         <Skills />
+        <Recognition />
         <Writing />
         <Contact />
       </main>

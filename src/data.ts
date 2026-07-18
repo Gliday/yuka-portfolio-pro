@@ -183,4 +183,77 @@ export const ABOUT_BIO = [
 export const COPY = {
   writingIntro: "My published and reviewed work spans nutraceutical science, conservation, and open peer review. Below you'll find peer-reviewed and conference output alongside my contributions to PreReview, where I've completed 10+ open reviews. For the complete and current record, see my ORCID profile.",
   contactIntro: "I'm always glad to talk about wildlife survey technology, AI-assisted monitoring, or conservation data work across East Africa — whether you're a potential collaborator, partner, or fellow researcher. The best ways to reach me are below.",
+  experienceIntro: "The full arc — from lab benches in India to field survey operations in Kenya. Bench-to-field range built across seven roles on three continents.",
+  recognitionIntro: "Awards, credentials, and the community and teaching work alongside the research.",
 }
+
+export interface Role {
+  org: string
+  title: string
+  location: string
+  dates: string
+  note: string
+  tag: string
+}
+
+/* Full professional history (most recent first) */
+export const EXPERIENCE: Role[] = [
+  {
+    org: 'Save the Elephants (STE)', title: 'Wildlife Survey Technology & Research Officer',
+    location: 'Voi, Kenya', dates: 'Mar 2024 – Present', tag: 'Conservation Tech',
+    note: 'Lead for aerial survey modernisation — camera-based + AI-assisted census on TB-scale imagery, plus HECx Trainer-of-Trainers and cross-functional conservation projects.',
+  },
+  {
+    org: 'Shamba AI', title: 'Founder / Research Officer',
+    location: 'Nairobi, Kenya', dates: 'Feb 2024 – Present', tag: 'AgriTech',
+    note: 'Built an AI-enabled agriculture concept for climate-smart decision-making and yield improvement; prototyped ML/data workflows from field requirements.',
+  },
+  {
+    org: 'NETA Discovery', title: 'Research Assistant (Hybrid)',
+    location: 'Sydney, Australia', dates: 'Mar 2024 – Jan 2026', tag: 'Bioinformatics',
+    note: 'Analysed RNA-seq datasets in R (DESeq2) and supported literature biocuration / pathway analysis for epilepsy research.',
+  },
+  {
+    org: 'Punjabi University Patiala', title: 'Research Apprentice',
+    location: 'Patiala, India', dates: 'Sept 2021 – Jan 2024', tag: 'Lab Research',
+    note: 'Executed nutraceutical and gastrointestinal bioaccessibility studies (in vitro / in vivo); contributed analyses, figures, and drafts for manuscripts and reviews.',
+  },
+  {
+    org: 'Acentric Research Labs', title: 'Research Intern',
+    location: 'Chandigarh, India', dates: 'May 2022 – Aug 2022', tag: 'Genomics',
+    note: 'Identified cancer risk variants via genomic data analysis in R / Julia, producing interpretable summaries for downstream research.',
+  },
+  {
+    org: 'NextGen Helper', title: 'Bioinformatics Intern',
+    location: 'New Delhi, India', dates: 'Jun 2022 – Aug 2022', tag: 'ML',
+    note: 'Applied machine-learning methods for genomic pattern recognition, improving signal detection in high-dimensional datasets.',
+  },
+  {
+    org: 'Guru Nanak Dev University', title: 'Lab Assistant',
+    location: 'Amritsar, India', dates: 'Oct 2019 – Apr 2021', tag: 'Teaching',
+    note: 'Supported zoology / genetics lab practicals and entomology / nematology activities, improving lab readiness and data capture.',
+  },
+]
+
+export const AWARDS = [
+  { title: 'Indian Government Scholarship (ICCR)', detail: 'For M.Sc. Biotechnology (2021–2023), Punjabi University, India' },
+  { title: "Dean's Roll of Honour", detail: 'Best graduating student, B.Sc. Biology — Pwani University, Kenya' },
+]
+
+export const CERTIFICATIONS = [
+  { title: 'Soft Skills & Business Training', detail: 'Yusudi Skills2Grow Program · Jun–Jul 2019' },
+  { title: 'Basic Digital Skills', detail: 'eMobilis Mobile Technology Institute · Jun 2019' },
+  { title: 'Computer Applications', detail: 'Hertford International College · Feb–Jun 2014' },
+]
+
+export const MEMBERSHIPS = [
+  { title: 'Biochemistry & Biotechnology Professionals Society of Kenya', detail: 'BBPSK · Member BBP-00199' },
+  { title: 'Red Cross Society of Kenya', detail: 'Active member · Jun 2017 – Present' },
+]
+
+export const ACTIVITIES = [
+  { title: 'Workshops, conferences & environmental hackathons', detail: 'Ongoing professional development' },
+  { title: 'Taught Zoology & Genetics lab practicals', detail: 'Guru Nanak Dev University, Zoology Department' },
+  { title: 'Pioneer Member — Science Journal Club', detail: 'Pwani University · 2017–2018' },
+  { title: 'BOG Biology & Maths teacher', detail: 'Mugunga High School' },
+]
