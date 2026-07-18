@@ -166,23 +166,26 @@ export const CASES: CaseStudy[] = [
 ]
 
 export const SKILLS = [
-  { group: 'Aerial Survey & Monitoring', items: ['Oblique camera counts (OCC)', 'Workflow design & standardisation', 'QA/QC for large imagery', 'Census accuracy'] },
-  { group: 'AI / ML Monitoring', items: ['Platform evaluation & benchmarking', 'Human-in-the-loop annotation', 'TB-scale dataset handling', 'ML/data workflow design'] },
-  { group: 'Data Analysis & Reporting', items: ['R', 'Python (Conda)', 'Julia', 'Power BI', 'Tableau', 'Donor reporting'] },
+  { group: 'Conservation Technology & Aerial Surveys', items: ['Oblique camera counts (OCC)', 'Survey workflow design & standardisation', 'QA/QC for TB-scale imagery', 'Census accuracy & auditability'] },
+  { group: 'AI, ML & Computer Vision', items: ['Detection & counting workflows', 'AI platform evaluation & benchmarking', 'Human-in-the-loop annotation', 'Dataset curation & ground-truthing'] },
+  { group: 'Bioinformatics & Computational Biology', items: ['RNA-seq / DESeq2', 'Differential expression', 'Pathway & enrichment analysis', 'Reproducible pipelines (R, Conda)'] },
+  { group: 'Molecular Biology & Lab Methods', items: ['PCR & DNA extraction', 'Metabarcoding (diet analysis)', 'SNP / paternity genetics', 'In-vitro bioaccessibility'] },
+  { group: 'Data Analysis, Visualisation & Reporting', items: ['R', 'Python (Conda)', 'Julia', 'Power BI', 'Tableau', 'Donor-facing reporting'] },
   { group: 'GIS & Field Data Systems', items: ['ArcGIS', 'Survey123 workflows', 'Field data collection & logistics'] },
-  { group: 'Research & Lab', items: ['RNA-seq / DESeq2', 'PCR & DNA extraction', 'Metabarcoding', 'SNP / genetics support'] },
-  { group: 'Program Delivery', items: ['Trainer-of-Trainers (ToT)', 'M&E systems', 'Multi-stakeholder engagement', 'Field logistics'] },
+  { group: 'Training, M&E & Program Delivery', items: ['Trainer-of-Trainers (ToT)', 'M&E system design', 'Multi-stakeholder engagement', 'Field logistics & coordination'] },
+  { group: 'Research Writing & Open Science', items: ['Manuscripts, figures & reviews', '10+ PreReview peer reviews', 'ORCID-listed publications', 'Reproducible documentation'] },
 ]
 
 export const ABOUT_BIO = [
-  "I'm Gliday Yuka Luvonga, a wildlife survey technology and research officer based in Voi, Kenya. My work sits where conservation field operations meet data science: I lead the modernisation of aerial surveys at Save the Elephants, replacing manual census methods with camera-based, AI-assisted pipelines that handle terabyte-scale imagery. My goal is straightforward — to make wildlife monitoring across East Africa not just faster, but more accurate, reproducible, and auditable.",
-  "My path here runs through the lab as much as the field. I hold dual M.Sc. degrees, in Biotechnology from Punjabi University Patiala and in Zoology from Guru Nanak Dev University, both completed with First Class Honours. Along the way I've worked on carotenoid bioaccessibility, RNA-seq differential expression in R and DESeq2, SNP-based genetics, and metabarcoding. That bench-to-field range is what lets me translate messy real-world conservation problems into clear data and analytics requirements.",
-  "Beyond the survey work, I help build the human side of conservation. I've designed and facilitated Training-of-Trainers workshops for human–elephant coexistence, supported conservation agriculture demo farms and Tsavo schools education monitoring, and contributed to open science through more than ten peer reviews on PreReview. I care about credible, measurable impact — and about systems that the next person can pick up and trust.",
+  "I'm Gliday Yuka Luvonga, a conservation technologist and research scientist working across Kenya's Nairobi and Tsavo landscapes. As Lead for aerial survey modernisation at Save the Elephants, I turn terabyte-scale field imagery into scalable, auditable, AI-ready monitoring systems — and build the training that keeps them running on the ground.",
+  "My foundation is in the lab. I hold dual M.Sc. degrees — Biotechnology and Zoology, both First Class — and have worked hands-on with RNA-seq and DESeq2, PCR, DNA extraction, metabarcoding, SNP genetics, and carotenoid bioaccessibility. That molecular and bioinformatics grounding shapes how I think about data: reproducible, documented, and defensible.",
+  "In the field, I bridge conservation operations and data engineering — designing oblique-camera-count workflows, standing up QA/QC'd imagery pipelines, benchmarking AI detection platforms, and delivering Human–Elephant Coexistence Training-of-Trainers with aligned M&E. I care about systems that survive real field constraints: limited connectivity, mixed literacy, and the need for numbers you can defend to donors and governments.",
+  "I'm now looking to extend this work — through PhD research, conservation-technology collaborations, and consulting on AI-enabled monitoring and reproducible data systems. If you're building at the intersection of ecology, biotechnology, and applied AI in Africa and beyond, I'd love to talk.",
 ]
 
 export const COPY = {
   writingIntro: "My published and reviewed work spans nutraceutical science, conservation, and open peer review. Below you'll find peer-reviewed and conference output alongside my contributions to PreReview, where I've completed 10+ open reviews. For the complete and current record, see my ORCID profile.",
-  contactIntro: "I'm always glad to talk about wildlife survey technology, AI-assisted monitoring, or conservation data work across East Africa — whether you're a potential collaborator, partner, or fellow researcher. The best ways to reach me are below.",
+  contactIntro: "Whether you're a university weighing a PhD candidate, a conservation NGO modernising monitoring, a research team needing bioinformatics or reproducible data systems, or a partner exploring AI-assisted wildlife work — I'd be glad to talk. The fastest ways to reach me are below.",
   experienceIntro: "The full arc — from lab benches in India to field survey operations in Kenya. Bench-to-field range built across seven roles on three continents.",
   recognitionIntro: "Awards, credentials, and the community and teaching work alongside the research.",
 }
@@ -200,7 +203,7 @@ export interface Role {
 export const EXPERIENCE: Role[] = [
   {
     org: 'Save the Elephants (STE)', title: 'Wildlife Survey Technology & Research Officer',
-    location: 'Voi, Kenya', dates: 'Mar 2024 – Present', tag: 'Conservation Tech',
+    location: 'Nairobi / Tsavo, Kenya', dates: 'Mar 2024 – Present', tag: 'Conservation Tech',
     note: 'Lead for aerial survey modernisation — camera-based + AI-assisted census on TB-scale imagery, plus HECx Trainer-of-Trainers and cross-functional conservation projects.',
   },
   {

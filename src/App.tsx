@@ -100,16 +100,19 @@ function Hero() {
       </svg>
 
       <div className="wrap hero-content">
-        <p className="hero-eyebrow">Wildlife Survey Technology &amp; Research</p>
-        <h1>Turning wildlife surveys into <span className="ink">scalable, auditable, AI-ready</span> pipelines.</h1>
-        <p className="hero-secondary">And building the training systems that make human–elephant coexistence work on the ground.</p>
+        <p className="hero-eyebrow">Conservation Technologist · Research Scientist</p>
+        <h1>Bridging field ecology, biotechnology, and <span className="ink">AI-enabled data systems</span>.</h1>
+        <p className="hero-secondary">For wildlife monitoring and molecular research impact — turning terabyte-scale field data into scalable, auditable, decision-ready systems across East Africa.</p>
+        <p className="hero-intro">I lead aerial survey modernisation at Save the Elephants and build reproducible pipelines that connect lab science, field conservation, and machine-learning-assisted monitoring. Dual M.Sc. in Biotechnology &amp; Zoology — grounded in East African conservation, built for global research.</p>
+        <div className="hero-availability"><span className="avail-dot" /> Open to PhD positions, research collaborations &amp; consulting</div>
         <div className="hero-cta">
           <a className="btn btn-primary" onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })} style={{ cursor: 'pointer' }}>See selected work →</a>
+          <a className="btn btn-ghost" href="/Gliday-Yuka-Luvonga-CV.pdf" download>Download CV ↓</a>
           <a className="btn btn-ghost" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} style={{ cursor: 'pointer' }}>Reach out ↗</a>
         </div>
         <div className="hero-meta">
           <span><i className="wp" /> Save the Elephants — Lead, Aerial Survey Modernisation</span>
-          <span><i className="wp" /> Voi, Kenya · East Africa</span>
+          <span><i className="wp" /> Nairobi / Tsavo, Kenya</span>
           <span><i className="wp" /> Dual M.Sc. · Biotechnology &amp; Zoology</span>
         </div>
       </div>
@@ -146,23 +149,28 @@ function Services() {
     <section className="section" id="services">
       <div className="wrap">
         <span className="eyebrow"><span className="dot" />What I do</span>
-        <h2 className="section-title">Three connected <em>practices</em></h2>
-        <p className="section-intro">I turn field realities into clean, reproducible data — and turn that data into decisions that conservation teams, donors, and scientists can trust.</p>
+        <h2 className="section-title">From <em>bench to field to pipeline</em></h2>
+        <p className="section-intro">Four connected practices that trace one arc — lab science, field conservation, data systems, and the training that makes them stick.</p>
         <div className="do-grid">
           <article className="do-card">
             <svg className="do-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2"><rect x="6" y="14" width="28" height="18" rx="3" /><circle cx="20" cy="23" r="6" /><path d="M6 14l-4-5M34 14l4-5M6 32l-4 5M34 32l4 5" /></svg>
-            <h3>Survey modernisation</h3>
-            <p>Camera-based oblique counts (OCC) and AI-assisted processing replacing manual census — with standardised, QA/QC'd workflows on terabyte-scale aerial imagery.</p>
+            <h3>Wildlife Survey Technology</h3>
+            <p>Camera-based oblique counts (OCC) and terabyte-scale imagery pipelines that replace manual census with standardised, QA/QC'd, reproducible data.</p>
           </article>
           <article className="do-card">
             <svg className="do-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="14" r="4" /><circle cx="12" cy="34" r="4" /><circle cx="36" cy="24" r="4" /><path d="M16 14h8l8 8M16 34h8l8-8" /></svg>
-            <h3>AI / ML monitoring</h3>
-            <p>End-to-end platform benchmarking and human-in-the-loop annotation — translating field constraints into auditable adoption decisions, not vendor demos.</p>
+            <h3>AI-Enabled Monitoring</h3>
+            <p>Computer-vision detection, platform benchmarking, and human-in-the-loop annotation — field-tested against real constraints, not vendor demos.</p>
+          </article>
+          <article className="do-card">
+            <svg className="do-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 6c8 6 8 12 0 18s-8 12 0 18" /><path d="M32 6c-8 6-8 12 0 18s8 12 0 18" /><path d="M18 13h12M17 23h14M18 33h12" /></svg>
+            <h3>Bioinformatics &amp; Molecular Research</h3>
+            <p>RNA-seq / DESeq2, PCR, metabarcoding, and SNP genetics — reproducible, documented analysis that carries lab rigour from bench to pipeline.</p>
           </article>
           <article className="do-card">
             <svg className="do-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="24" cy="14" r="6" /><path d="M12 38c0-7 5-12 12-12s12 5 12 12" /><path d="M8 30l-4 2M40 30l4 2" /></svg>
-            <h3>Training &amp; M&amp;E</h3>
-            <p>Trainer-of-Trainers programs for human–elephant coexistence — aligned curriculum, facilitation, and monitoring that deliver consistently across cohorts.</p>
+            <h3>Training, M&amp;E &amp; Impact</h3>
+            <p>Trainer-of-Trainers for human–elephant coexistence with aligned M&amp;E and donor-ready reporting — capacity that holds across cohorts.</p>
           </article>
         </div>
       </div>
@@ -313,11 +321,13 @@ function About() {
         <h2 className="section-title">Field operations meet <em>data science</em></h2>
         <div className="about-grid">
           <div>
-            {/* HEADSHOT: drop headshot.jpg into /public, then uncomment the <img> and delete the placeholder. */}
-            {/* <img className="about-photo" src="/headshot.jpg" alt="Gliday Yuka Luvonga, Wildlife Survey Technology & Research Officer" /> */}
-            <div className="about-photo-placeholder">
-              <span style={{ fontSize: '1.6rem' }}>🖼️</span>
-              <span>Add <strong>/public/headshot.jpg</strong><br />then enable the &lt;img&gt; in App.tsx (About)</span>
+            {/* To use a real photo: drop headshot.jpg into /public, then swap the
+                <div className="about-mono"> below for:
+                <img className="about-photo" src="/headshot.jpg" alt="Gliday Yuka Luvonga" /> */}
+            <div className="about-mono" aria-hidden="true">
+              <span className="mono-initials">GYL</span>
+              <span className="mono-name">Gliday Yuka Luvonga</span>
+              <span className="mono-role">Conservation Technologist · Research Scientist</span>
             </div>
             <div className="about-bio">
               {ABOUT_BIO.map((p, i) => <p key={i}>{p}</p>)}
